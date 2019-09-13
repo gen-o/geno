@@ -1,0 +1,219 @@
+@prefix onto: <http://example.org/geneticOntology/onto#> .
+@prefix data: <http://example.org/geneticOntology/data#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+
+############
+##
+## Cendre 1
+##
+############
+
+data:CLSRGRMS4A3a_Missy11h		a  	onto:Diary .
+
+data:CLSRGRMS4A1a_XVIIIMissy	a  	onto:Diary .
+
+data:CLSRGRMS4A3a_Missy11h		onto:diaryIsBeforeDiary		data:CLSRGRMS4A1a_XVIIIMissy .
+
+data:GD_Cendre_Ajourdhui_19300710  	a  	onto:GeneticDossier .
+
+data:Cendre_Ajourdhui_19300710  	a 	onto:Publication .
+
+data:CLSRGRMS4A1a_XVIIIMissy  	onto:diaryIsReusedInGeneticDossier  	data:GD_Cendre_Ajourdhui_19300710 .
+
+data:GD_Cendre_Ajourdhui_19300710  	onto:geneticDossierResultsInPublication  	data:Cendre_Ajourdhui_19300710 .
+
+
+
+############
+##
+## Cendre 2
+##
+############
+
+## Diary entries reused into genetic dossier of Cendre
+
+data:CLSRGRMS4A1a_toiQui  	a  	onto:Diary ;
+							onto:diaryIsReusedInGeneticDossier data:GD_Cendre_Ajourdhui_19300710 .
+
+data:CLSRGRMS4A3a_22V17  	a  	onto:Diary ;
+							onto:diaryIsReusedInGeneticDossier data:GD_Cendre_Ajourdhui_19300710 .
+
+data:CLSRGRMS4A13a_2nov1918  	a  	onto:Diary ;
+								onto:diaryIsReusedInGeneticDossier data:GD_Cendre_Ajourdhui_19300710 .
+
+data:CLSRGRMS4A13a_24jan1919  	a  	onto:Diary ;
+								onto:diaryIsReusedInGeneticDossier data:GD_Cendre_Ajourdhui_19300710 .
+
+
+data:CLSRGRMS4A1a_mardi12oct  	a  	onto:Diary ;
+								onto:diaryIsReusedInGeneticDossier data:GD_Cendre_Ajourdhui_19300710 .
+
+
+data:CLSRGRMS4A1a_Le12mars  	a  	onto:Diary ;
+								onto:diaryIsReusedInGeneticDossier data:GD_Cendre_Ajourdhui_19300710 .
+
+
+## Reuse of Cendre for new genetic dossiers: Feuillets and Air de la solitude
+
+data:Feuillets_Ecrits_1950 		a  	onto:Publication .
+
+data:GD_Feuillets_Ecrits_1950 	a 	onto:GeneticDossier ;
+								onto:geneticDossierResultsInPublication 	data:Feuillets_Ecrits_1950 .
+
+data:Cendre_Ajourdhui_19300710  	onto:publicationIsReusedInGeneticDossier  	data:GD_Feuillets_Ecrits_1950 .
+
+
+data:AirDeLaSolitude_1945 	a  	onto:Publication .
+
+data:GD_AirDeLaSolitude_1945 	a 	onto:GeneticDossier ;
+								onto:geneticDossierResultsInPublication 	data:AirDeLaSolitude_1945 .
+
+data:Cendre_Ajourdhui_19300710  	onto:publicationIsReusedInGeneticDossier  	data:GD_AirDeLaSolitude_1945 .
+
+
+## Feuillets
+
+data:CLSRHLMD1ROU4_Feuillets 	a  		onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier  	data:GD_Feuillets_Ecrits_1950 .
+
+
+## Air de la solitude
+
+data:BucheronDeMars_GuildeDuLivre_193903 	a 	onto:Publication .
+
+data:GD_BucheronDeMars_GuildeDuLivre_193903  	a  	onto:geneticDossier ;
+												onto:geneticDossierResultsInPublication  	data:BucheronDeMars_GuildeDuLivre_193903 .
+
+data:BucheronDeMars_GuildeDuLivre_193903  	onto:publicationIsReusedInGeneticDossier 	data:GD_AirDeLaSolitude_1945 .
+
+data:AirDeLaSolitude_GuildeDuLivre_194104 	a 	onto:Publication .
+
+data:GD_AirDeLaSolitude_GuildeDuLivre_194104  	a  	onto:geneticDossier ;
+												onto:geneticDossierResultsInPublication  	data:AirDeLaSolitude_GuildeDuLivre_194104 .
+
+data:AirDeLaSolitude_GuildeDuLivre_194104  	onto:publicationIsReusedInGeneticDossier 	data:GD_AirDeLaSolitude_1945 .
+
+data:PremierCoupDeFaux_Aujourdhui_19300501 		a 	onto:Publication .
+
+data:GD_PremierCoupDeFaux_Aujourdhui_19300501  	a  	onto:geneticDossier ;
+												onto:geneticDossierResultsInPublication  	data:PremierCoupDeFaux_Aujourdhui_19300501 .
+
+data:PremierCoupDeFaux_Aujourdhui_19300501  	onto:publicationIsReusedInGeneticDossier 	data:GD_AirDeLaSolitude_1945 .
+
+data:collectionPrive_AirDeLaSolitude  	a  	onto:AvantTexte ;
+										onto:avantTexteIsPartOfGeneticDossier  	data:GD_AirDeLaSolitude_1945 .
+
+
+############
+##
+## Requiem 1
+##
+############
+
+data:Dedicace_SchweizerAnnalen_193511 	a   	onto:Publication .
+
+data:GD_Dedicace_SchweizerAnnalen_193511 	a  	onto:GeneticDossier ;
+											onto:geneticDossierResultsInPublication 	data:Dedicace_SchweizerAnnalen_193511 .
+
+data:CLSRGRMS1H12b_LaNeige 	a 	onto:Diary ;
+							onto:diaryIsReusedInGeneticDossier  data:GD_Dedicace_SchweizerAnnalen_193511 .
+
+data:CLSRGRMS1H11a_LaBise 	a 	onto:AvantTexte ;
+							onto:avantTexteIsPartOfGeneticDossier data:GD_Dedicace_SchweizerAnnalen_193511 .
+
+data:CLSRGRMS1H12a_Dedicace 	a 	onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier data:GD_Dedicace_SchweizerAnnalen_193511 .
+
+data:CLSRGRMS1H11a_LaBise 	onto:AvantTexteisBeforeAvantTexte 	data:CLSRGRMS1H12a_Dedicace .
+
+
+############
+##
+## Requiem 2
+##
+############
+
+
+## Deux moments d'une quête
+
+data:DeuxMomentsDUneQuete_SuisseContemporaine_194111 	a  	onto:Publication .
+
+data:GD_DeuxMomentsDUneQuete_SuisseContemporaine_194111 	a  	onto:GeneticDossier ;
+														onto:geneticDossierResultsInPublication   data:DeuxMomentsDUneQuete_SuisseContemporaine_194111 .
+
+data:Dedicace_SchweizerAnnalen_193511  	onto:publicationIsReusedInGeneticDossier 	data:GD_DeuxMomentsDUneQuete_SuisseContemporaine_194111 .
+
+data:CLSRGRMS1H13a_Quete 	a  	onto:AvantTexte ;
+							onto:avantTexteIsPartOfGeneticDossier 	data:GD_DeuxMomentsDUneQuete_SuisseContemporaine_194111 .
+
+data:CLSRGRMS1H13b_DeuxMoments 	a  	onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier 	data:GD_DeuxMomentsDUneQuete_SuisseContemporaine_194111 .
+
+data:CLSRGRMS1H13c_NonPas 	a  	onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier 	data:GD_DeuxMomentsDUneQuete_SuisseContemporaine_194111 .
+
+data:CLSRGRMS1H13a_Quete 	onto:avantTextIsBeforeAvantTexte 	data:CLSRGRMS1H13b_DeuxMoments .
+data:data:CLSRGRMS1H13b_DeuxMoments 	onto:avantTextIsBeforeAvantTexte 	data:CLSRGRMS1H13c_NonPas .
+
+
+## D'une quête
+
+data:DUneQuete_BottegheOscure_195005 	a  	onto:Publication .
+
+data:GD_DUneQuete_BottegheOscure_195005 	a  	onto:GeneticDossier ;
+											onto:geneticDossierResultsInPublication  	data:DUneQuete_BottegheOscure_195005 .
+
+data:DeuxMomentsDUneQuete_SuisseContemporaine_194111 	onto:publicationIsReusedInGeneticDossier 	data:GD_DUneQuete_BottegheOscure_195005 .										
+
+data:CLSRGRMS1H14b_EntreLes 	a  	onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier 	data:GD_DUneQuete_BottegheOscure_195005 .
+
+data:CLSRGRMS1H14a_LeVatican 	a  	onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier 	data:GD_DUneQuete_BottegheOscure_195005 .
+
+data:CLSRGRMS1H14c_DUnRequiem 	a  	onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier 	data:GD_DUneQuete_BottegheOscure_195005 .
+
+data:CLSRGRMS1H14d_DUnRequiem 	a  	onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier 	data:GD_DUneQuete_BottegheOscure_195005 .
+
+data:CLSRGRMS1H14e_NonPas 	a  	onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier 	data:GD_DUneQuete_BottegheOscure_195005 .
+
+data:CLSRGRMS1H14b_EntreLes 	onto:avantTextIsBeforeAvantTexte 	data:CLSRGRMS1H14c_DUnRequiem .
+data:CLSRGRMS1H14a_LeVatican 	onto:avantTextIsBeforeAvantTexte 	data:CLSRGRMS1H14c_DUnRequiem .
+data:CLSRGRMS1H14c_DUnRequiem 	onto:avantTextIsBeforeAvantTexte 	data:CLSRGRMS1H14d_DUnRequiem .
+data:CLSRGRMS1H14d_DUnRequiem 	onto:avantTextIsBeforeAvantTexte 	data:CLSRGRMS1H14e_NonPas .
+
+
+## Moulin de Lussery
+
+data:MoulinDeLussery_LeRadio_19341123  	a  	onto:Publication .
+
+data:GD_MoulinDeLussery_LeRadio_19341123 	a 	onto:GeneticDossier ;
+											onto:geneticDossierResultsInPublication 	data:MoulinDeLussery_LeRadio_19341123 .
+
+data:MoulinDeLussery_LeRadio_19341123 	onto:publicationIsReusedInGeneticDossier 	data:GD_DUneQuete_BottegheOscure_195005 .
+
+data:LaChauxDeFonds10675 	a 	onto:GeneticDossier ; 	
+							onto:avantTexteIsPartOfGeneticDossier 	data:GD_DUneQuete_BottegheOscure_195005 .
+
+
+## Requiem
+
+data:Requiem_1967 	a 	onto:Publication .
+
+data:GD_Requiem_1967 	a  	onto:GeneticDossier ;
+						onto:geneticDossierResultsInPublication  	data:Requiem_1967 .
+
+data:DUneQuete_BottegheOscure_195005  	onto:publicationIsReusedInGeneticDossier 	data:GD_Requiem_1967 .
+
+data:CLSRGRMS1H21a_DUnRequiem 	a 	onto:AvantTexte ;
+								onto:avantTexteIsPartOfGeneticDossier  	data:GD_Requiem_1967 .
