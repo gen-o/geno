@@ -2,7 +2,7 @@
 
 This is the development repo of GENO, an OWL2 ontology for the field of genetic criticism and genetic editing.
 
-For a human-readable version of the latest version of GENO, click **[here](https://w3id.org/lode/owlapi/https://raw.githubusercontent.com/gustaveroudproject/geneticOntology/master/onto/geneticOntology_0-2.ttl)** (powered by [LODE](http://www.essepuntato.it/lode)).
+For a **human-readable** version of the latest version of GENO, [visualize with LODE](https://w3id.org/lode/owlapi/https://raw.githubusercontent.com/gen-o/geno/master/onto/geneticOntology_0-2.ttl).
 
 
 ## Repo structure
@@ -13,13 +13,11 @@ This repo contains
 - `data`. A folder where are collected data samples for testing purpose
 - `docs`. A folder containing documentation about the ontology, including the motivating scenario and some competency questions with related sparql queries.
 
-
+<!--
 ## Work in progress
 
-**GENO is under development and the URI are not resolvable yet!**
-
 Before continuing the development, we want to hear from the community. If you want to participate or to receive updates, follow us here or write us at elena.spadini@unil.ch and alessio.christen@unil.ch.
-
+-->
 
 ## GENO implementation for Gustave Roud
 
