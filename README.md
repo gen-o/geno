@@ -9,7 +9,7 @@ For a **human-readable** version of the latest version of GENO, [visualize with 
 
 This repo contains
 
-- `onto`. A folder with the ontology (check latest version)
+- `onto`. A folder with the ontology (and previous versions for documentation)
 - `data`. A folder where are collected data samples for testing purpose
 - `docs`. A folder containing documentation about the ontology, including the motivating scenario and some competency questions with related sparql queries.
 
