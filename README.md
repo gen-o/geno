@@ -1,5 +1,7 @@
 # GENO, a Genetic Ontology
 
+**Website**: [https://gen-o.github.io](https://gen-o.github.io)
+
 This is the development repo of GENO, an OWL2 ontology for the field of genetic criticism and genetic editing.
 
 For a **human-readable** version of the latest version of GENO, [visualize with LODE](https://w3id.org/lode/owlapi/https://raw.githubusercontent.com/gen-o/geno/master/onto/geneticOntology_0-2.ttl).
@@ -37,8 +39,8 @@ GENO is meant to be general enough to accommodate the needs of different project
 1. download or clone the repo
 2. create a repository in the DB
 2. import from rdf:
-	- select the ontology (.ttl), upload, when asked insert as Base URI and as Context http://example.org/geneticOntology/onto
-	- select the data sample (.ttl), upload, when asked insert as Base URI and as Context http://example.org/geneticOntology/data
+	- select the ontology (.ttl), upload, when asked insert as Base URI and as Context http://purl.org/hum/geno
+	- select the data sample (.ttl), upload, when asked insert as Base URI and as Context http://purl.org/hum/geno/data
 	(This way you can delete all the data, without touching at the ontology)
 3. Now you can explore and query the data. Examples of sparql queries are available [here](docs/competencyQuestions_sparqlQueries.md).
 
