@@ -2,6 +2,8 @@
 
 **Website**: [https://gen-o.github.io](https://gen-o.github.io)
 
+**URL**: http://purl.org/hum/geno
+
 This is the development repo of GENO, an OWL2 ontology for the field of genetic criticism and genetic editing.
 
 For a **human-readable** version of the latest version of GENO, [visualize with LODE](https://w3id.org/lode/owlapi/https://raw.githubusercontent.com/gen-o/geno/master/onto/geneticOntology_0-2.ttl).
