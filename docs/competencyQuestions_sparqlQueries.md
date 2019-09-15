@@ -54,9 +54,9 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX onto: <http://purl.org/hum/geno/>
 select ?GeneticDossier (count(?AvantTexte) as ?count)
 where { 
-	?AvantTexte rdf:type onto:AvantTexte .
+    ?AvantTexte rdf:type onto:AvantTexte .
     ?GeneticDossier rdf:type onto:GeneticDossier .
-    ?AvantTexte onto:AvantTexteIsPartOfGeneticDossier ?GeneticDossier .
+    ?AvantTexte onto:avantTexteIsPartOfGeneticDossier ?GeneticDossier .
 }
 group by ?GeneticDossier
 ```
@@ -73,7 +73,8 @@ where {
     ?GeneticDossier rdf:type onto:GeneticDossier .
     ?GeneticDossier onto:geneticDossierResultsInPublication ?Publication .
     data:Cendre_Ajourdhui_19300710 ?PublicationIsReusedInGeneticDossier ?GeneticDossier .
-} limit 100 
+}
+group by ?Publication 
 ```
 
 **Question 4**

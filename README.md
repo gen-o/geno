@@ -39,8 +39,8 @@ GENO is meant to be general enough to accommodate the needs of different project
 1. download or clone the repo
 2. create a repository in the DB
 2. import from rdf:
-	- select the ontology (.ttl), upload, when asked insert as Base URI and as Context http://purl.org/hum/geno
-	- select the data sample (.ttl), upload, when asked insert as Base URI and as Context http://purl.org/hum/geno/data
+	- select the ontology (.ttl), upload, when asked insert as Base URI and as Context http://purl.org/hum/geno/
+	- select the data sample (.ttl), upload, when asked insert as Base URI and as Context http://purl.org/hum/geno/data/
 	(This way you can delete all the data, without touching at the ontology)
 3. Now you can explore and query the data. Examples of sparql queries are available [here](docs/competencyQuestions_sparqlQueries.md).
 

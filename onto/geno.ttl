@@ -83,7 +83,7 @@
 
 
 #========== Genetic dossier ===========#
-:AvantTexteIsPartOfGeneticDossier 	a owl:ObjectProperty ;
+:avantTexteIsPartOfGeneticDossier 	a owl:ObjectProperty ;
 									rdfs:label "avant-texte is part of genetic dossier"@en ;
 									rdfs:domain :AvantTexte ;
 									rdfs:range :GeneticDossier ;
@@ -108,7 +108,7 @@
 						rdfs:comment "A diary entry is chronologically before a new copy of the same diary entry. It happens when the author copies one or more diary entries with or without modification in a new support."@en .
 
 
-:AvantTexteisBeforeAvantTexte 	a owl:ObjectProperty ;
+:avantTexteisBeforeAvantTexte 	a owl:ObjectProperty ;
 						rdfs:label "avant-texte is before avant-texte"@en ;
 						rdfs:domain :AvantTexte ;
 						rdfs:range :AvantTexte ;
