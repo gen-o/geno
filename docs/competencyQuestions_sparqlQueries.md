@@ -36,7 +36,7 @@
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX onto: <http://example.org/geneticOntology/onto#>
+PREFIX onto: <http://purl.org/hum/geno/>
 select ?Publication where { 
 	?GeneticDossier rdf:type onto:GeneticDossier .
     ?Publication rdf:type onto:Publication .
@@ -51,7 +51,7 @@ group by ?Publication
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX onto: <http://example.org/geneticOntology/onto#>
+PREFIX onto: <http://purl.org/hum/geno/>
 select ?GeneticDossier (count(?AvantTexte) as ?count)
 where { 
 	?AvantTexte rdf:type onto:AvantTexte .
@@ -65,8 +65,8 @@ group by ?GeneticDossier
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX onto: <http://example.org/geneticOntology/onto#>
-PREFIX data: <http://example.org/geneticOntology/data#>
+PREFIX onto: <http://purl.org/hum/geno/>
+PREFIX data: <http://purl.org/hum/geno/data/>
 select ?Publication
 where { 
 	?Publication rdf:type onto:Publication .
@@ -80,7 +80,7 @@ where {
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX onto: <http://example.org/geneticOntology/onto#>
+PREFIX onto: <http://purl.org/hum/geno/>
 select ?AvantTexte (count(?GeneticDossier) as ?count)
 where { 
 	?AvantTexte rdf:type onto:AvantTexte .
