@@ -14,7 +14,8 @@
 
 <http://purl.org/hum/geno> 	a owl:Ontology ;
 					dc:title "GENO, the Genetic Network Ontology"@en ;
-					dc:description "This ontology is a generic model for genetic entities and their relationships, applicable mainly in the fields of genetic criticism and editing. The image below has been created with http://visualdataweb.de/webvowl/."^^xsd:string ;
+					dc:description "This ontology is a generic model for genetic entities and their relationships, applicable mainly in the fields of genetic criticism and editing."^^xsd:string ;
+					dc:description "The image below has been created with http://visualdataweb.de/webvowl/."@en ;
 					dc:description <https://gen-o.github.io/images/geno_webVOWL.png> ;
 					dc:date "2019-09-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
 					dc:rights "This work is distributed under a Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/)."^^xsd:string ;
@@ -22,8 +23,8 @@
 								"Alessio Christen"^^xsd:string ;
 
 					rdfs:comment """
-						**URL:** http://purl.org/hum/geno
-						**Website:** gen-o.github.io"""@en ;
+**URL:** http://purl.org/hum/geno
+**Website:** gen-o.github.io"""@en ;
 					owl:versionInfo "0.2"^^xsd:string .
 	
 #owl:priorVersion <http://purl.org/spar/geno/2019-01-30> ;
