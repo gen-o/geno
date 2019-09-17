@@ -23,8 +23,8 @@
 								"Alessio Christen"^^xsd:string ;
 
 					rdfs:comment """
-**URL:** http://purl.org/hum/geno
-**Website:** gen-o.github.io"""@en ;
+									**URL:** http://purl.org/hum/geno
+									**Website:** gen-o.github.io"""@en ;
 					owl:versionInfo "0.2"^^xsd:string .
 	
 #owl:priorVersion <http://purl.org/spar/geno/2019-01-30> ;
