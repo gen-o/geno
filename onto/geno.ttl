@@ -26,7 +26,7 @@ GENO is an ontology for the field of Genetic Criticism and Editing, that makes p
 
 **URL:** http://purl.org/hum/geno
 
-**Website:** gen-o.github.io"""@en ;
+**Website:** https://gen-o.github.io"""@en ;
 					owl:versionInfo "0.2"^^xsd:string .
 	
 #owl:priorVersion <http://purl.org/spar/geno/2019-01-30> ;
