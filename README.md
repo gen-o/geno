@@ -27,14 +27,14 @@ Before continuing the development, we want to hear from the community. If you wa
 
 ## GENO implementation for Gustave Roud
 
-GENO has been created as part of « Gustave Roud. *Œuvres complètes* », a project of critical edition of the complete works of the Swiss author Gustave Roud (1897-1976) at the University of Lausanne (dir. D. Maggetti and C. Jaquier). In this context, it is implemented in [Knora](https://www.knora.org/), the software framework used in the edition. In knora, each project has its ontology, which should be compliant with the [Knora Data Model](https://docs.knora.org/paradox/02-knora-ontologies/knora-base.html#the-knora-data-model). 
+GENO has been created as part of the project « Gustave Roud. *Œuvres complètes* », the critical edition of the complete works of the Swiss author Gustave Roud (1897-1976) (directed by D. Maggetti and C. Jaquier, University of Lausanne, 2017-2021). In this context, it is implemented in the DaSCH platform [DSP](https://www.dasch.swiss/), the software framework used in the edition. In DSP, each project has its own ontology, which should use [Knora Base](https://docs.dasch.swiss/2023.03.02/DSP-API/02-dsp-ontologies/knora-base/) as upper-level ontology. 
 
-If you want to know more about the project and about the implementation of GENO in it, check the *Actualités* in our [page](https://www.unil.ch/clsr/home/menuinst/projets-de-recherche/gustave-roud-oeuvres-completes.html).
+To know more about the project and the implementation of GENO in it, see [Gustave Roud. Textes et archives](https://roud.unil.ch/).
 
 
-## GENO and other complementary models
+## GENO in context
 
-GENO is meant to be general enough to accommodate the needs of different projects of scholarly editing and genetic criticism. It can be used as it is, but most probably it will require complementary models for real use, including bibliographical ones for describing the publications, and archival ones for the manuscripts and documents description. GENO is quite small and simple, because it only focuses on the materials from the point of view of genetic criticism.
+GENO is meant to be general enough to accommodate the needs of different projects of scholarly editing and genetic criticism. In practice, it should be combined with other ontologies for describing bibliographic and archival resources. GENO is quite small and simple, because it only focuses on the materials from the point of view of genetic criticism.
 
 
 
@@ -44,8 +44,7 @@ GENO is meant to be general enough to accommodate the needs of different project
 2. create a repository in the DB
 2. import from rdf:
 	- select the ontology (.ttl), upload, when asked insert as Base URI and as Context http://purl.org/hum/geno/
-	- select the data sample (.ttl), upload, when asked insert as Base URI and as Context http://purl.org/hum/geno/data/
-	(This way you can delete all the data, without touching at the ontology)
+	- select the data sample (.ttl), upload, when asked insert as Base URI and as Context http://purl.org/hum/geno/data/ (by uploading the ontology and the data in two different graphs, you can update or delete one without touching the other)
 3. Now you can explore and query the data. Examples of sparql queries are available [here](docs/competencyQuestions_sparqlQueries.md).
 
 
