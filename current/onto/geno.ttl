@@ -1,0 +1,428 @@
+@prefix : <https://w3id.org/geno#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@base <https://w3id.org/geno#> .
+
+<https://w3id.org/geno> rdf:type owl:Ontology ;
+                        dc:title "GENO, the Genetic Network Ontology"@en ;
+                        owl:versionIRI <https://w3id.org/geno/2023-07-01> ;
+                        owl:versionInfo "1.0" ;
+                        dc:creator "Elena Spadini" ;
+                        dc:date "2023-07-01" ;
+                        dc:description "GENO is a generic model for genetic entities and their relationships, applicable mainly in the fields of Genetic Criticism and Editing." ;
+                        dc:description <https://gen-o.github.io/images/geno_webVOWL.png> ;
+                        dc:rights "This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0)." ;
+                        rdfs:comment """
+                        GENO is an ontology for the field of Genetic Criticism and Editing, that makes possible to describe all kinds of avant-textes, their relationships in and outside the genetic dossier and with the publications.
+
+                        **URL:** http://purl.org/hum/geno
+
+                        **Website:** https://gen-o.github.io
+
+                        **License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+                        **Creator**: [Elena Spadini](https://orcid.org/0000-0002-4522-2833)
+
+                        **Cite as:** Spadini, Elena. 2023. “GENO, the Genetic Network Ontology.” https://w3id.org/geno
+                        """ ;
+                        owl:priorVersion <https://github.com/gen-o/geno/tree/master/2019-09-01> ;
+                        owl:imports <http://purl.org/spar/fabio> .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/vocab/frbr/core#realization
+<http://purl.org/vocab/frbr/core#realization> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <http://purl.org/vocab/frbr/core#realizationOf> .
+
+
+###  http://purl.org/vocab/frbr/core#realizationOf
+<http://purl.org/vocab/frbr/core#realizationOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://purl.org/spar/fabio/Expression> ;
+                                                rdfs:range <http://purl.org/spar/fabio/Work> .
+
+
+###  https://w3id.org/geno#dossierIsReusedInDossier
+:dossierIsReusedInDossier rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :isReusedInDossier ;
+                                 rdfs:domain :GeneticDossier ;
+                                 rdfs:range :GeneticDossier .
+
+
+###  https://w3id.org/geno#hasGeneticStage
+:hasGeneticStage rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Avant-textualWitness ;
+                 rdfs:range :GeneticStage .
+
+
+###  https://w3id.org/geno#isAfter
+:isAfter rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/geno#isGeneticWitnessInDossier
+:isGeneticWitnessInDossier rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Witness ;
+                           rdfs:range :GeneticDossier .
+
+
+###  https://w3id.org/geno#isPartOfDossier
+:isPartOfDossier rdf:type owl:ObjectProperty ;
+                        rdfs:domain :GeneticDossier ;
+                        rdfs:range :GeneticDossier .
+
+
+###  https://w3id.org/geno#isPartOfPublication
+:isPartOfPublication rdf:type owl:ObjectProperty ;
+                     rdfs:domain :PublicationPart ;
+                     rdfs:range :Publication .
+
+
+###  https://w3id.org/geno#isReusedInDossier
+:isReusedInDossier rdf:type owl:ObjectProperty ;
+                          rdfs:range :GeneticDossier .
+
+
+###  https://w3id.org/geno#publicationIsReusedInDossier
+:publicationIsReusedInDossier rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf :isReusedInGeneticDossier ;
+                                     rdfs:domain :Publication ;
+                                     rdfs:range :GeneticDossier .
+
+
+###  https://w3id.org/geno#publicationPartIsReusedInDossier
+:publicationPartIsReusedInDossier rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf :isReusedInGeneticDossier ;
+                                         rdfs:domain :PublicationPart ;
+                                         rdfs:range :GeneticDossier .
+
+
+###  https://w3id.org/geno#resultsInPublication
+:resultsInPublication rdf:type owl:ObjectProperty ;
+                      rdfs:domain :GeneticDossier ;
+                      rdfs:range :Publication .
+
+
+###  https://w3id.org/geno#resultsInPublicationPart
+:resultsInPublicationPart rdf:type owl:ObjectProperty ;
+                          rdfs:domain :GeneticDossier ;
+                          rdfs:range :PublicationPart .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/spar/fabio/Expression
+<http://purl.org/spar/fabio/Expression> rdf:type owl:Class .
+
+
+###  http://purl.org/spar/fabio/Work
+<http://purl.org/spar/fabio/Work> rdf:type owl:Class .
+
+
+###  https://w3id.org/geno#Avant-textualWitness
+:Avant-textualWitness rdf:type owl:Class ;
+                      rdfs:subClassOf :EndogenesisWitness ,
+                                      :Witness ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasGeneticStage ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :GeneticStage
+                                      ] ;
+                      owl:disjointWith :DiaryEntry ,
+                                       :Documentation ,
+                                       :ExogenesisWitness ,
+                                       :GeneticDossier ,
+                                       :GeneticStage ,
+                                       :Marginalia ,
+                                       :OtherMaterial ,
+                                       :Publication ,
+                                       :PublicationPart ;
+                      rdfs:comment "Materiale a priori genetico. La pubblicazione che ridiventa materiale genetico, lo ridiventa in un documento concreto (non nella Publication, che qui è considerata come Expression). Quel documento è di fatto un avant-texte." .
+
+
+###  https://w3id.org/geno#CompositionalPhaseResource
+:CompositionalPhaseResource rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( :Avant-textualWitness
+                                                                       [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :hasGeneticStage ;
+                                                                                         owl:hasValue :ClearCopy
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :hasGeneticStage ;
+                                                                                         owl:hasValue :Draft
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :hasGeneticStage ;
+                                                                                         owl:hasValue :Sketch
+                                                                                       ]
+                                                                                     )
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] .
+
+
+###  https://w3id.org/geno#DiaryEntry
+:DiaryEntry rdf:type owl:Class ;
+            rdfs:subClassOf :EndogenesisWitness ,
+                            :Witness ;
+            owl:disjointWith :Documentation ,
+                             :ExogenesisWitness ,
+                             :GeneticDossier ,
+                             :GeneticStage ,
+                             :Marginalia ,
+                             :OtherMaterial ,
+                             :PostEditorialPhaseResource ,
+                             :PrecompositionalPhaseResource ,
+                             :PrepublicationPhaseResource ,
+                             :Publication ,
+                             :PublicationPart .
+
+
+###  https://w3id.org/geno#Documentation
+:Documentation rdf:type owl:Class ;
+               rdfs:subClassOf :ExogenesisWitness ,
+                               :Witness ;
+               owl:disjointWith :Marginalia ,
+                                :OtherMaterial .
+
+
+###  https://w3id.org/geno#EndogenesisWitness
+:EndogenesisWitness rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Witness
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :Avant-textualWitness
+                                                                               :DiaryEntry
+                                                                             )
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf :Witness ;
+                    owl:disjointWith :ExogenesisWitness ,
+                                     :GeneticDossier ,
+                                     :GeneticStage ,
+                                     :Marginalia ,
+                                     :OtherMaterial ,
+                                     :Publication ,
+                                     :PublicationPart .
+
+
+###  https://w3id.org/geno#ExogenesisWitness
+:ExogenesisWitness rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( :Witness
+                                                              [ rdf:type owl:Class ;
+                                                                owl:unionOf ( :Documentation
+                                                                              :Marginalia
+                                                                              :OtherMaterial
+                                                                            )
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf :Witness ;
+                   owl:disjointWith :GeneticDossier ,
+                                    :GeneticStage ,
+                                    :PostEditorialPhaseResource ,
+                                    :PrecompositionalPhaseResource ,
+                                    :PrepublicationPhaseResource ,
+                                    :Publication ,
+                                    :PublicationPart .
+
+
+###  https://w3id.org/geno#GeneticDossier
+:GeneticDossier rdf:type owl:Class ;
+                owl:disjointWith :GeneticStage ,
+                                 :Marginalia ,
+                                 :OtherMaterial ,
+                                 :PostEditorialPhaseResource ,
+                                 :PrecompositionalPhaseResource ,
+                                 :PrepublicationPhaseResource ,
+                                 :Publication ,
+                                 :PublicationPart ,
+                                 :Witness .
+
+
+###  https://w3id.org/geno#GeneticStage
+:GeneticStage rdf:type owl:Class ;
+              rdfs:subClassOf owl:Thing ;
+              owl:disjointWith :Marginalia ,
+                               :OtherMaterial ,
+                               :PostEditorialPhaseResource ,
+                               :PrecompositionalPhaseResource ,
+                               :PrepublicationPhaseResource ,
+                               :Publication ,
+                               :PublicationPart ,
+                               :Witness .
+
+
+###  https://w3id.org/geno#Marginalia
+:Marginalia rdf:type owl:Class ;
+            rdfs:subClassOf :ExogenesisWitness ,
+                            :Witness ;
+            owl:disjointWith :OtherMaterial ,
+                             :PostEditorialPhaseResource ,
+                             :PrecompositionalPhaseResource ,
+                             :PrepublicationPhaseResource ,
+                             :Publication ,
+                             :PublicationPart ;
+            rdfs:comment "marcas y anotaciones manuscritas" .
+
+
+###  https://w3id.org/geno#OtherMaterial
+:OtherMaterial rdf:type owl:Class ;
+               rdfs:subClassOf :ExogenesisWitness ,
+                               :Witness ;
+               owl:disjointWith :PostEditorialPhaseResource ,
+                                :PrecompositionalPhaseResource ,
+                                :PrepublicationPhaseResource ,
+                                :Publication ,
+                                :PublicationPart .
+
+
+###  https://w3id.org/geno#PostEditorialPhaseResource
+:PostEditorialPhaseResource rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( :Avant-textualWitness
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasGeneticStage ;
+                                                                         owl:hasValue :PublishedItem
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            owl:disjointWith :Publication ,
+                                             :PublicationPart .
+
+
+###  https://w3id.org/geno#PrecompositionalPhaseResource
+:PrecompositionalPhaseResource rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( :Avant-textualWitness
+                                                                          [ rdf:type owl:Class ;
+                                                                            owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :hasGeneticStage ;
+                                                                                            owl:hasValue :List
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :hasGeneticStage ;
+                                                                                            owl:hasValue :Plan
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :hasGeneticStage ;
+                                                                                            owl:hasValue :Scenario
+                                                                                          ]
+                                                                                        )
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               owl:disjointWith :Publication ,
+                                                :PublicationPart .
+
+
+###  https://w3id.org/geno#PrepublicationPhaseResource
+:PrepublicationPhaseResource rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( :Avant-textualWitness
+                                                                        [ rdf:type owl:Class ;
+                                                                          owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty :hasGeneticStage ;
+                                                                                          owl:hasValue :Proofs
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty :hasGeneticStage ;
+                                                                                          owl:hasValue :FinalCopy
+                                                                                        ]
+                                                                                      )
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             owl:disjointWith :Publication ,
+                                              :PublicationPart .
+
+
+###  https://w3id.org/geno#Publication
+:Publication rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.org/spar/fabio/Expression> ;
+             owl:disjointWith :PublicationPart .
+
+
+###  https://w3id.org/geno#PublicationPart
+:PublicationPart rdf:type owl:Class .
+
+
+###  https://w3id.org/geno#Witness
+:Witness rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/geno#ClearCopy
+:ClearCopy rdf:type owl:NamedIndividual ,
+                    :GeneticStage .
+
+
+###  https://w3id.org/geno#PublishedItem
+:PublishedItem rdf:type owl:NamedIndividual ,
+                            :GeneticStage .
+
+
+###  https://w3id.org/geno#Proofs
+:Proofs rdf:type owl:NamedIndividual ,
+                          :GeneticStage .
+
+
+###  https://w3id.org/geno#Draft
+:Draft rdf:type owl:NamedIndividual ,
+                :GeneticStage .
+
+
+###  https://w3id.org/geno#FinalCopy
+:FinalCopy rdf:type owl:NamedIndividual ,
+                    :GeneticStage .
+
+
+###  https://w3id.org/geno#List
+:List rdf:type owl:NamedIndividual ,
+               :GeneticStage .
+
+
+###  https://w3id.org/geno#Plan
+:Plan rdf:type owl:NamedIndividual ,
+               :GeneticStage .
+
+
+###  https://w3id.org/geno#Scenario
+:Scenario rdf:type owl:NamedIndividual ,
+                   :GeneticStage .
+
+
+###  https://w3id.org/geno#Sketch
+:Sketch rdf:type owl:NamedIndividual ,
+                 :GeneticStage .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DiaryEntry
+                :Marginalia
+                :OtherMaterial
+                :Publication
+                :PublicationPart
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
