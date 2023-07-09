@@ -1,0 +1,159 @@
+# Author: Elena Spadini
+# Date: 2023-07-01
+# License: CC-BY 4.0
+# About: This file contains the RDF data for describing the genetic relationships between the witnesses of the short story "En mer" by Bernard Comment, modelled according to GENO, the Genetic Networks Ontology (version 1.0).
+# This data is part of a prototype, available at <https://comment-enmer.github.io>, and as such it is not meant to be complete. The IRIs used in this file are persistent, but all point to the prototype website only. Witnesses are described in details in the website, including links to the individual documents on Helvetic Archives when available.
+
+
+
+@prefix geno: <https://w3id.org/geno#> .
+                        
+### RADIO 1998
+                       
+<https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998>   a geno:Dossier ;
+                            geno:resultsInPublication <https://w3id.org/geno/CommentEnMer/pub_enMer_radio1998> .
+
+<https://w3id.org/geno/CommentEnMer/pub_enMer_radio1998> a geno:Publication .                          
+
+<https://w3id.org/geno/CommentEnMer/witness_A-13-a-01>  a geno:Avant-textualWitness ;
+                     geno:hasGeneticStage geno:Draft ;
+                     geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-13-a-02>  a geno:Avant-textualWitness ;
+                     geno:hasGeneticStage geno:Draft ;
+                     geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998> .                     
+
+<https://w3id.org/geno/CommentEnMer/witness_A-13-a-03>  a geno:Avant-textualWitness ;
+                     geno:hasGeneticStage geno:Draft ;
+                     geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998> .
+                                                               
+<https://w3id.org/geno/CommentEnMer/witness_A-13-a-04>  a geno:Avant-textualWitness ;
+                     geno:hasGeneticStage geno:Draft ;
+                     geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-13-a-05>  a geno:Avant-textualWitness ;
+                     geno:hasGeneticStage geno:FinalCopy ;
+                     geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-13-a-06>  a geno:Avant-textualWitness ;
+                     geno:hasGeneticStage geno:FinalCopy ;
+                     geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-13-a-07_part1>   a geno:Avant-textualWitness ;
+                            geno:hasGeneticStage geno:Sketch ;
+                            geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-13-a-07_part2>   a geno:Documentation ;
+                            geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-17-a_enMer-recit-version-longue-doc> a geno:Avant-textualWitness ;
+                                                geno:hasGeneticStage geno:FinalCopy ;
+                                                geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_radio1998> .
+
+
+                        
+### NRF 1999
+                       
+<https://w3id.org/geno/CommentEnMer/dossier_enMer_NRF1999> a geno:Dossier ;
+                        geno:resultsInPublication <https://w3id.org/geno/CommentEnMer/pub_enMer_NRF1999> .
+
+<https://w3id.org/geno/CommentEnMer/pub_enMer_NRF1999> a geno:Publication .                        
+
+<https://w3id.org/geno/CommentEnMer/pub_enMer_radio1998>   geno:publicationIsReusedInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_NRF1999> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-6-25-a>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:Draft ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_NRF1999> .
+                     
+<https://w3id.org/geno/CommentEnMer/witness_A-6-25-b>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:Draft ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_NRF1999> .
+                    
+<https://w3id.org/geno/CommentEnMer/witness_A-6-25-c>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:Draft ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_NRF1999> .
+                      
+<https://w3id.org/geno/CommentEnMer/witness_A-6-25-d>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:FinalCopy ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_NRF1999> .
+                        
+<https://w3id.org/geno/CommentEnMer/witness_A-6-25-e>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:FinalCopy ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_NRF1999> .
+                     
+<https://w3id.org/geno/CommentEnMer/witness_A-17-a_enMer-recit-doc>    a geno:Avant-textualWitness ;
+                                    geno:hasGeneticStage geno:FinalCopy ;
+                                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_NRF1999> .
+
+                 
+                        
+### NOVEL (2006-2009)
+                       
+<https://w3id.org/geno/CommentEnMer/dossier_enMer_novel> a geno:Dossier .
+
+<https://w3id.org/geno/CommentEnMer/pub_enMer_NRF1999> geno:publicationIsReusedInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_novel> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-12-a-21bis>  a geno:Avant-textualWitness ;
+                        geno:hasGeneticStage geno:Sketch ;
+                        geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_novel> .
+                        
+<https://w3id.org/geno/CommentEnMer/witness_A-15-f-01>  a geno:Avant-textualWitness ;
+                     geno:hasGeneticStage geno:Sketch ;
+                     geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_enMer_novel> .                       
+
+
+
+### SHORT STORIES COLLECTION (1993-200?)
+
+<https://w3id.org/geno/CommentEnMer/dossier_shortStoriesCollection> a geno:Dossier .
+
+<https://w3id.org/geno/CommentEnMer/pub_enMer_NRF1999> geno:publicationIsReusedInDossier <https://w3id.org/geno/CommentEnMer/dossier_shortStoriesCollection> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-15-e-01>  a geno:Avant-textualWitness ;
+                     geno:hasGeneticStage geno:Plan ;
+                     geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_shortStoriesCollection> .
+                   
+                   
+                        
+### TOUT PASSE 2011                        
+                        
+<https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> a geno:Dossier ;
+                        geno:resultsInPublication <https://w3id.org/geno/CommentEnMer/pub_toutPasse2011> .
+                        
+<https://w3id.org/geno/CommentEnMer/pub_enMer_NRF1999> geno:publicationIsReusedInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .
+<https://w3id.org/geno/CommentEnMer/dossier_shortStoriesCollection> geno:dossierIsReusedInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .                  
+                        
+<https://w3id.org/geno/CommentEnMer/witness_A-3-e-05>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:Draft ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-3-e-16>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:Draft ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .
+                    
+<https://w3id.org/geno/CommentEnMer/witness_A-3-e-17>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:Draft ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .
+                        
+<https://w3id.org/geno/CommentEnMer/witness_A-3-e-18>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:Draft ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .
+                        
+<https://w3id.org/geno/CommentEnMer/witness_A-3-e-19>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:Draft ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .
+
+<https://w3id.org/geno/CommentEnMer/witness_A-3-e-20>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:FinalCopy ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .
+                     
+<https://w3id.org/geno/CommentEnMer/witness_A-3-e-21>  a geno:Avant-textualWitness ;
+                    geno:hasGeneticStage geno:CorrectedProofs ;
+                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .
+                     
+<https://w3id.org/geno/CommentEnMer/witness_A-17-a_tout-passe-docx>    a geno:Avant-textualWitness ;
+                                    geno:hasGeneticStage geno:FinalCopy ;
+                                    geno:isGeneticWitnessInDossier <https://w3id.org/geno/CommentEnMer/dossier_toutPasse2011> .
+                     
+
+                        

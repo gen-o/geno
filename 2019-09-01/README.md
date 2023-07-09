@@ -1,10 +1,12 @@
-# GENO, a Genetic Ontology
+**This version is outdated!** A [newer version](https://w3id.org/geno) of this ontology is available.
 
-**Website**: https://gen-o.github.io
+# GENO, a Genetic Ontology
 
 **URL**: http://purl.org/hum/geno
 
 **Ontology source**: http://purl.org/hum/geno.ttl
+
+**Version info**: 0.2.
 
 This is the development repo of GENO, an OWL2 ontology for the field of genetic criticism and genetic editing.
 
