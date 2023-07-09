@@ -6,7 +6,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
-@prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix CRMtex: <http://www.cidoc-crm.org/extensions/crmtex/> .
 
 @base <https://w3id.org/geno#> .
