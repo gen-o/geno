@@ -1,4 +1,4 @@
-@prefix : <http://purl.org/hum/geno/> .
+@prefix : <http://purl.org/hum/geno-0.2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,10 +12,10 @@
 ##
 ############
 
-<http://purl.org/hum/geno> 	a owl:Ontology ;
+<http://purl.org/hum/geno-0.2> 	a owl:Ontology ;
 					dc:title "GENO, the Genetic Network Ontology"@en ;
 					dc:description "GENO is a generic model for genetic entities and their relationships, applicable mainly in the fields of Genetic Criticism and Editing. The image below has been created with http://visualdataweb.de/webvowl/."^^xsd:string ;
-					dc:description <https://gen-o.github.io/images/geno_webVOWL.png> ;
+					dc:description <https://github.com/gen-o/geno/tree/master/2019-09-01/docs/geno_webVOWL.png> ;
 					dc:date "2019-09-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
 					dc:rights "This work is distributed under a Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/)."^^xsd:string ;
 					dc:creator 	"Elena Spadini"^^xsd:string ,
@@ -24,13 +24,8 @@
 					rdfs:comment """
 GENO is an ontology for the field of Genetic Criticism and Editing, that makes possible to describe all kinds of avant-textes, their relationships in and outside the genetic dossier and with the publications.
 
-**URL:** http://purl.org/hum/geno
-
-**Website:** https://gen-o.github.io"""@en ;
+**URL:** http://purl.org/hum/geno-0.2"""@en ;
 					owl:versionInfo "0.2"^^xsd:string .
-	
-#owl:priorVersion <http://purl.org/spar/geno/2019-01-30> ;
-#**Cite as:** Spadini, E., Christen, A. (2019). ...... doi ....pdf"""@en ;
 
 ############
 ##
