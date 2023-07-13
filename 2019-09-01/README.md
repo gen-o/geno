@@ -8,7 +8,7 @@
 
 This is the development repo of GENO, an OWL2 ontology for the field of genetic criticism and genetic editing.
 
-<img src="docs/geno-0.2_webVOWL.png" width="50%">
+<img src="docs/geno-0.2_webVOWL.png" width="80%">
 
 
 ## Repo structure
