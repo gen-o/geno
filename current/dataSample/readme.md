@@ -6,7 +6,7 @@ A brief description of the data is contained in each file.
 
 ## Questions
 
-**These questions apply to the Roud data sample.**
+The questions apply to the Roud dataset, but most of them would work also on other datasets.
 
 
 | 1 |      |
