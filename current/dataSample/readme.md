@@ -7,7 +7,8 @@ A brief description of the data is contained in each file.
 ## Questions
 
 
-| 1 | |
+| 1 |      |
+|-----|-------|
 | Question | Which publications by Roud are rooted in his diary? |
 | Outcome | The list of all the publications whose genesis includes a diary entry |
 
