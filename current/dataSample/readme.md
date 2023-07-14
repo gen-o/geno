@@ -13,34 +13,34 @@ A brief description of the data is contained in each file.
 | Outcome | The list of all the publications whose genesis includes a diary entry |
 
 
-| 2 |
+| 2 |      |
 | ------------- |-------------|
 | Question | How many genetic witnesses belong to a genetic dossier of Roud's publications? |
 | Outcome | The number of genetic witnesses included in each dossier. If a publication has multiple dossiers for the different parts, they are counted separately |
 
 
 
-| 3 |
+| 3 |      |
 | ------------- |-------------|
 | Question | In which publications it is reused the article "Cendre", originally published in the periodical Aujourd'hui in 1930? |
 | Outcome | The list of all the publications that have "Cendre" as one of their sources |
 
 
 
-| 4 |
+| 4 |      |
 | ------------- |-------------|
 | Question | To how many genetic dossiers a genetic witness can belong to in Roud's works? |
 | Outcome | The maximum number of connections between a witness and a genetic dossier |
 
 
 
-| 5 |
+| 5 |      |
 | ------------- |-------------|
 | Question | List everything that belongs to the dossier of Feuillets (1929) |
 | Outcome | Retrieve all the genetic witnesses and the resources (publications, publication parts, dossiers) reused in the dossier of Feuillets (1929) |
 
 
-| 6 |
+| 6 |      |
 | ------------- |-------------|
 | Question | All witnesses belonging to a pre-compositional phase in Roud's corpus |
 | Outcome | Retrieve all plans, lists and scenarios. |
