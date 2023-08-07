@@ -7,7 +7,7 @@
 
 @prefix geno: <https://w3id.org/geno#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
-@prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
+@prefix roud-oeuvres: <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#> .
 
 
 
