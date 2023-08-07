@@ -1,3 +1,10 @@
+# Author: Elena Spadini
+# Date: 2023-07-01
+# License: CC-BY 4.0
+# About: This file contains the RDF data for describing the genetic networks of Gustave Roud's main publications. This data is a subset of the data produced in the project 'Gustave Roud, Complete Works'. The complete project data is published at https://roud.unil.ch/ and archived at https://ark.dasch.swiss/ark:/72163/1/0112.
+# This dataset contains all the genetic related data in the project dataset, but omits other information from the complete project dataset that is not directly related to the genetic networks, such as descriptions of people and places, or the full text of the works. In the original project dataset, genetic entities and relationships were modelled according to the GENO ontology 0.2, whereas here the data has been converted to the newer version of the GENO ontology (1.0).
+
+
 @prefix geno: <https://w3id.org/geno#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
