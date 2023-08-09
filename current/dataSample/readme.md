@@ -1,10 +1,17 @@
 
-# Data samples and examples of queries
+# Competency questions and data samples
 
-A brief description of the data is contained in each file.
+This readme contains competency questions that have been used for the ontology conception and development, as well as their corresponding SPARQL queries.
+
+Two data samples are also provided, to exemplify the capabilities of the ontology and to test the queries. A brief description of the data is contained in each file.
+
+To run the queries, use your preferred triplestore or [this notebook](runSPARQL.ipynb). For an interactive version of the notebook, launch myBinder by clicking on the button (might take several minutes).
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gen-o/geno/HEAD?labpath=current%2FdataSample%2FrunSPARQL.ipynb)
 
 
-## Questions
+
+## Competency questions
 
 The questions apply to the Roud dataset, but most of them would work also on other datasets.
 
@@ -44,8 +51,8 @@ The questions apply to the Roud dataset, but most of them would work also on oth
 
 | 6 |      |
 | ------------- |-------------|
-| Question | All witnesses belonging to a pre-compositional phase in Roud's corpus |
-| Outcome | Retrieve all plans, lists and scenarios. |
+| Question | List all witnesses belonging to a pre-compositional phase in Roud's corpus |
+| Outcome | Retrieve all resources of type pre-compositional, inferred as equivalent to the union of plans, lists and scenarios. |
 
 
 
