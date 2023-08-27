@@ -1,9 +1,9 @@
 
-# Competency questions and data samples
+# Data samples and competency questions
 
 This readme contains competency questions that have been used for the ontology conception and development, as well as their corresponding SPARQL queries.
 
-Two data samples are also provided, to exemplify the capabilities of the ontology and to test the queries. A brief description of the data is contained in each file.
+Two data samples are also provided, to exemplify the capabilities of the ontology and to test the queries: [https://doi.org/10.5281/zenodo.8287801](https://doi.org/10.5281/zenodo.8287801).
 
 To run the queries, use your preferred triplestore or [this notebook](runSPARQL.ipynb). For an interactive version of the notebook, launch myBinder by clicking on the button (might take several minutes).
 
