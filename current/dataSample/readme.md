@@ -61,40 +61,30 @@ The questions apply to the Roud dataset, but most of them would work also on oth
 **Question 1**
 
 ```sparql
-prefix geno: <https://w3id.org/geno#>
-PREFIX roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#>
+PREFIX geno: <https://w3id.org/geno#>
+PREFIX roud-oeuvres: <https://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-select ?Publication ?PubTitle ?PubDate where { 
-	
-    ?Diary rdf:type geno:DiaryEntry .
-    ?Diary geno:isMemberOfDossier ?GeneticDossier .
-    
-    {?GeneticDossier geno:resultsInPublication ?Publication .}
-    UNION
-    {?GeneticDossier geno:resultsInPublicationPart ?PubPart .
-    ?PubPart geno:isPartOfPublication ?Publication .}
-    
-    # show the publication title and date
-    ?Publication roud-oeuvres:publicationHasTitle ?PubTitle .
-    ?Publication roud-oeuvres:publicationHasDate ?PubDate .
-    
-}
-GROUP BY ?Publication ?PubTitle ?PubDate
-ORDER BY ?PubTitle ?PubDate
-```
 
-Simplified version that works out of the box in the notebook (without parsing the results):
-```sparql
-prefix geno: <https://w3id.org/geno#>
-PREFIX roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-select ?Publication where { 	
-    ?Diary rdf:type geno:DiaryEntry .
-    ?Diary geno:isMemberOfDossier ?GeneticDossier .    
-    {?GeneticDossier geno:resultsInPublication ?Publication .}
-    UNION
-    {?GeneticDossier geno:resultsInPublicationPart ?PubPart .
-    ?PubPart geno:isPartOfPublication ?Publication .} 
+SELECT DISTINCT ?Publication ?title WHERE {
+
+  # A diary entry is part of a genetic dossier
+  ?diaryEntry a geno:DiaryEntry ;
+              geno:isMemberOfDossier ?GeneticDossier .
+
+  # That dossier results in a publication or a part of one
+  {
+    ?GeneticDossier geno:resultsInPublication ?Publication .
+  }
+  UNION
+  {
+    ?GeneticDossier geno:resultsInPublicationPart ?PubPart .
+    ?PubPart geno:isPartOfPublication ?Publication .
+  }
+
+  # Optionally get the publication title
+  OPTIONAL {
+    ?Publication roud-oeuvres:publicationHasTitle ?title .
+  }
 }
 ```
 
